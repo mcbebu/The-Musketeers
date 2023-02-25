@@ -163,7 +163,46 @@
       }
 
       .header-big-top-margin {
-        margin-top: 50px;
+        margin-top: 150px;
+      }
+
+      .text-for-category {
+        width: 95px;
+        height: 57px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #000000;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+
+      .add-template-button {
+        margin-left: 300px;
+        position: absolute;
+        width: 107px;
+        height: 47px;
+        left: 241px;
+
+        background: #c9bebe;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+
+        color: #000000;
       }
     </style>
   </head>
@@ -182,6 +221,9 @@
           </div>
         </button>
         <h1 class="dashboard">Inventory</h1>
+        <button id="addTemplate" class="add-template-button">
+          <a href="templates.html">+ Add Template</a>
+        </button>
       </li>
     </div>
     <nav id="mySidenav" class="sidenav">
@@ -222,16 +264,32 @@
       </ul>
     </nav>
 
-    <button id="addTemplate" class="add-template">
-      <a href="templates.html">Add Template</a>
-    </button>
-
     <div class="container-fluid py-2">
       <h2 class="font-weight-light header-big-top-margin">Current Products</h2>
       <div class="d-flex flex-row flex-nowrap overflow-auto">
         <div class="card card-body">
-          <a href="clothesInventory.html">Clothes</a>
+          <img src="./clothes-pic.jpg" />
+          <a class="text-for-category" href="clothesInventory.html">Clothes</a>
         </div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+      </div>
+    </div>
+
+    <div class="container-fluid py-2">
+      <h2 class="font-weight-light header-big-top-margin">History</h2>
+      <div class="d-flex flex-row flex-nowrap overflow-auto">
         <div class="card card-body">Card</div>
         <div class="card card-body">Card</div>
         <div class="card card-body">Card</div>

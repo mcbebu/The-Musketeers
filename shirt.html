@@ -162,8 +162,12 @@
         }
       }
 
-      .header-big-top-margin {
-        margin-top: 60px;
+      .shirt-stuff {
+        position: absolute;
+        width: 330px;
+        height: 296px;
+        left: 15px;
+        top: 144px;
       }
     </style>
   </head>
@@ -222,7 +226,7 @@
       </ul>
     </nav>
 
-    <div class="header-big-top-margin">
+    <div class="shirt-stuff">
       <h1>Shirts</h1>
       <form action="#" method="POST">
         <label for="shirt_size">Shirt size: </label><br />
@@ -245,8 +249,15 @@
 
         <input type="submit" value="Submit" />
       </form>
-    </div>
 
+      <div>
+        <label for="product-name">Product Name:</label>
+        <input type="text" id="product-name" />
+        <button onclick="generateCode()">Generate Code</button>
+        <p id="product-code"></p>
+      </div>
+    </div>
     <script src="./openSideBar.js"></script>
+    <script src="./generateCode.js"></script>
   </body>
 </html>
