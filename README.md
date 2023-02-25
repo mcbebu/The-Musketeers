@@ -2,10 +2,10 @@
 
 ### Problem Statement 
 Otterlive has several problems such as:
--- Inventory handling (inputting products is troublesome),
--- Dashboard utility (not fully utilised and lacks information on the types of actions users can take), 
--- Product and Promotion codes (troublesome to create and assign codes manually) 
--- User-friendliness (the target audience of Otterlive lack tech expertise to fully utilise certain features). 
+- Inventory handling (inputting products is troublesome),
+- Dashboard utility (not fully utilised and lacks information on the types of actions users can take), 
+- Product and Promotion codes (troublesome to create and assign codes manually) 
+- User-friendliness (the target audience of Otterlive lack tech expertise to fully utilise certain features). 
 
 ### Our Solutions 
 
