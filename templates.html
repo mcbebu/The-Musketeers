@@ -28,11 +28,11 @@
 
     <style>
       .cusSticky {
-                position: fixed;
-                top: 0;
-                width: 100%;
-                z-index: 999;
-            }
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+      }
 
       .nav {
         display: flex;
@@ -107,9 +107,9 @@
       }
 
       .card-body {
-        min-height: 300px;
-        min-width: 300px;
-        margin-right: 5px;
+        height: 300px;
+        width: 300px;
+        margin-bottom: 5px;
       }
 
       .card-img {
@@ -149,59 +149,6 @@
         margin-left: 50px;
       }
 
-    .chat-container{
-        height: 800px;
-        overflow-y: scroll;
-        
-    }
-    .background{
-        width: 360px;
-        height: 1200px;;
-    }
-
-    .scrollbox {
-      height: 800px;
-      overflow-y: scroll;
-      border: 1px solid black;
-      padding: 10px;
-    }
-
-    .box1{
-        width: 95%;
-        height: 300px;
-        padding-left: 15px;
-        padding-top: 1px;
-        justify-content: center;
-        margin: auto;
-        margin-bottom: 20px;
-        background-color: #E3E3E3;
-        
-    }
-
-    .red-box{
-        width: 300px;
-        height: 60px;
-        margin-top: 30px;
-        margin-left:8px;
-        border-radius: 10px;
-        display: flex;
-        justify-content: right;
-        background-color: #FF0000;
-    }
-
-    .small-box{
-        width: 45px;
-        height: 45px;
-        border-radius: 10px;
-        margin-top: 8px;
-        margin-right: 8px;
-        padding-top: 8px;
-        display: flex;
-        justify-content: center;
-        background-color: #D9D9D9;        
-    }
-
-
       /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
       #main {
         transition: margin-left 0.5s;
@@ -230,7 +177,7 @@
             />
           </div>
         </button>
-        <h1 class="dashboard">Sessions</h1>
+        <h1 class="dashboard">Templates</h1>
       </li>
     </div>
     <nav id="mySidenav" class="sidenav">
@@ -270,39 +217,25 @@
         </li>
       </ul>
     </nav>
+    <button id="toggleButton" class="toggle-button">Open Sidebar</button>
 
-</head>
-
-<body>
-
-    <div class = "chat-container px-2 scrollbox">
-        <div class = "background">
-            <h1>Sessions</h1>
-            <div class = "box1">
-                <p><h5>Products</h5>
-                    <br>
-                    <h6>1 added to this session</h6>
-                    <br>
-                    <h6>Black Shirt&emsp;FMKE&emsp;3 in stock&emsp;15SGD</h6>
-                </p>
-            </div>
-            <div class = "box1">
-                <div class = "red-box">
-                    <div class = "small-box">+</div>
-                </div>
-                <div class = "red-box">
-                    <div class = "small-box">+</div>
-                </div>
-                <div class = "red-box">
-                    <div class = "small-box">+</div>
-                </div>
-            </div>
-            <div class = "box1">
-                <p><h5>Revenue</h5></p>
-                <img src = "stonks.jpg" alt = "lol" width="95%" height="200">
-            </div>
-        
+    <h2 class="font-weight-light">Templates</h2>
+    <div class="row row-cols-2 g-3 d-flex container-fluid mx-auto">
+      <div class="col">
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+      </div>
+      <div class="col">
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+      </div>
     </div>
+
     <script src="./openSideBar.js"></script>
-</body>
+  </body>
 </html>
+v
