@@ -228,7 +228,7 @@
 
     <div class="shirt-stuff">
       <h1>Shirts</h1>
-      <form action="#" method="POST">
+      <form action="sessions.html" method="GET">
         <label for="shirt_size">Shirt size: </label><br />
         <select id="shirt_size" name="shirt_size">
           <option value="size_s">S</option>
@@ -247,12 +247,14 @@
         <label for="price">Price:</label><br />
         <input type="text" id="price" name="price" required /><br /><br />
 
-        <input type="submit" value="Submit" />
-      </form>
-
-      <div>
         <label for="product-name">Product Name:</label>
-        <input type="text" id="product-name" />
+        <input type="text" id="product-name" name = "product-name"/>
+      
+
+      <input type="submit" value="Submit" />
+      </form>
+      <div>
+
         <button onclick="generateCode()">Generate Code</button>
         <p id="product-code"></p>
       </div>

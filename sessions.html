@@ -351,5 +351,47 @@
             });
             }
     </script>
+    <script src = "./openSideBar.js"></script>
+
+    <h1>List of Form Items</h1>
+    <ul>
+      <li>
+        <strong>Shirt Size:</strong>
+        <span id="shirt_size"></span>
+      </li>
+      <li>
+        <strong>Quantity:</strong>
+        <span id="quantity"></span>
+      </li>
+      <li>
+        <strong>Price:</strong>
+        <span id="price"></span>
+      </li>
+      <li>
+        <strong>Product Name:</strong>
+        <span id="product_name"></span>
+      </li>
+    </ul>
+    <script>
+      // Get the form input values and display them in the list
+      const shirtSize = document.getElementById("shirt_size");
+      const quantity = document.getElementById("quantity");
+      const price = document.getElementById("price");
+      const productName = document.getElementById("product_name");
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const size = urlParams.get('shirt_size');
+      const qty = urlParams.get('quantity');
+      const prc = urlParams.get('price');
+      const name = urlParams.get('product-name');
+
+      shirtSize.innerText = size;
+      quantity.innerText = qty;
+      price.innerText = prc;
+      productName.innerText = name;
+    </script>
+</body>
+</html>
+
 </body>
 </html>
