@@ -1,5 +1,7 @@
 # The Musketeers (Ninja Van Code Dojo 2023)
 
+Figma link : https://www.figma.com/proto/qzJ4Zl73126kXPtP0Q5V5M/ninja-car?node-id=21%3A1069&scaling=min-zoom&page-id=12%3A1069
+
 ### Problem Statement 
 Otterlive has several problems such as:
 - Inventory handling (inputting products is troublesome),
