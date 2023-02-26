@@ -27,6 +27,13 @@
     <title>Otterlive</title>
 
     <style>
+      .cusSticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+      }
+
       .nav {
         display: flex;
         flex-direction: column;
@@ -37,6 +44,10 @@
         width: 260px;
         height: 500px;
 
+        background: #051448;
+      }
+
+      .nav-color {
         background: #051448;
       }
 
@@ -57,6 +68,28 @@
         align-items: left;
 
         color: #ffffff;
+      }
+
+      .dashboard {
+        position: absolute;
+        width: 181px;
+        height: 21px;
+        left: 100px;
+        top: 17px;
+
+        font-family: "Kameron";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 42px;
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+      }
+
+      .toggle-button {
+        width: 70px;
       }
 
       .item-2 {
@@ -128,10 +161,71 @@
           padding-top: 15px;
         }
       }
+
+      .header-big-top-margin {
+        margin-top: 150px;
+      }
+
+      .text-for-category {
+        width: 95px;
+        height: 57px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #000000;
+
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+
+      .add-template-button {
+        margin-left: 300px;
+        position: absolute;
+        width: 107px;
+        height: 47px;
+        left: 241px;
+
+        background: #c9bebe;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+
+        color: #000000;
+      }
     </style>
   </head>
 
   <body>
+    <div class="navbar navbar-expand-lg navbar-dark nav-color cusSticky">
+      <li class="nav-color">
+        <button id="toggleButton" class="toggle-button nav-color">
+          <div>
+            <img
+              src="burger-logo.jpg"
+              alt="press here to open side bar"
+              width="35"
+              height="40"
+            />
+          </div>
+        </button>
+        <h1 class="dashboard">Inventory</h1>
+        <button id="addTemplate" class="add-template-button">
+          <a href="templates.html">+ Add Template</a>
+        </button>
+      </li>
+    </div>
     <nav id="mySidenav" class="sidenav">
       <ul class="nav flex-column">
         <div class="image">
@@ -169,10 +263,32 @@
         </li>
       </ul>
     </nav>
-    <button id="toggleButton" class="toggle-button">Open Sidebar</button>
 
     <div class="container-fluid py-2">
-      <h2 class="font-weight-light">Current Products</h2>
+      <h2 class="font-weight-light header-big-top-margin">Current Products</h2>
+      <div class="d-flex flex-row flex-nowrap overflow-auto">
+        <div class="card card-body">
+          <img src="./clothes-pic.jpg" />
+          <a class="text-for-category" href="clothesInventory.html">Clothes</a>
+        </div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+      </div>
+    </div>
+
+    <div class="container-fluid py-2">
+      <h2 class="font-weight-light header-big-top-margin">History</h2>
       <div class="d-flex flex-row flex-nowrap overflow-auto">
         <div class="card card-body">Card</div>
         <div class="card card-body">Card</div>
@@ -187,15 +303,9 @@
         <div class="card card-body">Card</div>
         <div class="card card-body">Card</div>
         <div class="card card-body">Card</div>
-        <div class="card card-body">Card</div>
       </div>
     </div>
 
-    <div class="card" style="width: 18rem">
-      <div class="card-body">
-        <a href="dashboard.html"></a>
-      </div>
-    </div>
     <script src="./openSideBar.js"></script>
   </body>
 </html>

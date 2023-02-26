@@ -18,6 +18,11 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     ></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/aa62b02afe.js" crossorigin="anonymous"></script>
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inter"
@@ -27,6 +32,13 @@
     <title>Otterlive</title>
 
     <style>
+      .cusSticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 999;
+            }
+
       .nav {
         display: flex;
         flex-direction: column;
@@ -37,6 +49,10 @@
         width: 260px;
         height: 500px;
 
+        background: #051448;
+      }
+
+      .nav-color {
         background: #051448;
       }
 
@@ -57,6 +73,28 @@
         align-items: left;
 
         color: #ffffff;
+      }
+
+      .dashboard {
+        position: absolute;
+        width: 181px;
+        height: 21px;
+        left: 100px;
+        top: 17px;
+
+        font-family: "Kameron";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 42px;
+        display: flex;
+        align-items: center;
+
+        color: #ffffff;
+      }
+
+      .toggle-button {
+        width: 70px;
       }
 
       .item-2 {
@@ -156,7 +194,7 @@
         background-color: #FF0000;
     }
 
-    .small-box{
+    .myButton {
         width: 45px;
         height: 45px;
         border-radius: 10px;
@@ -164,8 +202,9 @@
         margin-right: 8px;
         padding-top: 8px;
         display: flex;
+        align-items: center;
         justify-content: center;
-        background-color: #D9D9D9;        
+        background-color: #f8f8f8;        
     }
 
     .top{
@@ -187,10 +226,30 @@
           padding-top: 15px;
         }
       }
+
+      .my-swal-container {
+            width: 300px;
+            height: 190px;
+        }
     </style>
   </head>
 
   <body>
+    <div class="navbar navbar-expand-lg navbar-dark nav-color cusSticky">
+      <li class="nav-color">
+        <button id="toggleButton" class="toggle-button nav-color">
+          <div>
+            <img
+              src="burger-logo.jpg"
+              alt="press here to open side bar"
+              width="35"
+              height="40"
+            />
+          </div>
+        </button>
+        <h1 class="dashboard">Sessions</h1>
+      </li>
+    </div>
     <nav id="mySidenav" class="sidenav">
       <ul class="nav flex-column">
         <div class="image">
@@ -228,12 +287,15 @@
         </li>
       </ul>
     </nav>
+<<<<<<< HEAD
         <button id="toggleButton" class="toggle-button">Open Sidebar</button>
         
 
         
       
     
+=======
+>>>>>>> 9bbee7125067b43f71064223bb224547ffe78476
 
 </head>
 
@@ -253,13 +315,13 @@
             <div class = "box1">
                 <p><h5>Reccomended</h5></p>
                 <div class = "red-box">
-                    <div class = "small-box">+</div>
+                    <button class="btn myButton"><i class="fa-solid fa-plus"></i></button>
                 </div>
                 <div class = "red-box">
-                    <div class = "small-box">+</div>
+                    <button class="btn myButton"><i class="fa-solid fa-plus"></i></button>
                 </div>
                 <div class = "red-box">
-                    <div class = "small-box">+</div>
+                    <button class="btn myButton"><i class="fa-solid fa-plus"></i></button>
                 </div>
             </div>
             <div class = "box1">
@@ -275,5 +337,83 @@
         
     </div>
     <script src="./openSideBar.js"></script>
+
+    <script>
+        const myButtons = document.getElementsByClassName('myButton');
+
+        // Add an event listener to the button
+        for (let i = 0; i < myButtons.length; i++) {
+            myButtons[i].addEventListener('click', () => {
+                Swal.fire({
+                title: 'Are you sure you want to take this action?',
+                customClass: {
+                    container: 'my-swal-container',
+                },
+                showDenyButton: true,
+                confirmButtonText: 'Confirm',
+                denyButtonText: 'Cancel'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Updated!', 
+                        icon: 'success',
+                        customClass: {
+                            container: 'my-swal-container',
+                }})
+                } else if (result.isDenied) {
+                    Swal.fire({
+                        title: 'Action was not taken.', 
+                        icon: 'error',
+                        customClass: {
+                            container: 'my-swal-container'
+                        }
+                    })
+                }
+                })
+            });
+            }
+    </script>
+    <script src = "./openSideBar.js"></script>
+
+    <h1>List of Form Items</h1>
+    <ul>
+      <li>
+        <strong>Shirt Size:</strong>
+        <span id="shirt_size"></span>
+      </li>
+      <li>
+        <strong>Quantity:</strong>
+        <span id="quantity"></span>
+      </li>
+      <li>
+        <strong>Price:</strong>
+        <span id="price"></span>
+      </li>
+      <li>
+        <strong>Product Name:</strong>
+        <span id="product_name"></span>
+      </li>
+    </ul>
+    <script>
+      // Get the form input values and display them in the list
+      const shirtSize = document.getElementById("shirt_size");
+      const quantity = document.getElementById("quantity");
+      const price = document.getElementById("price");
+      const productName = document.getElementById("product_name");
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const size = urlParams.get('shirt_size');
+      const qty = urlParams.get('quantity');
+      const prc = urlParams.get('price');
+      const name = urlParams.get('product-name');
+
+      shirtSize.innerText = size;
+      quantity.innerText = qty;
+      price.innerText = prc;
+      productName.innerText = name;
+    </script>
+</body>
+</html>
+
 </body>
 </html>

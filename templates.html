@@ -18,22 +18,15 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     ></script>
 
-    <link href="/static/styles.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inter"
     />
+    <link href="Ninjavan/static/styles.css" rel="stylesheet" />
 
     <title>Otterlive</title>
 
     <style>
-      .cusSticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 999;
-      }
-
       .cusSticky {
         position: fixed;
         top: 0;
@@ -113,6 +106,17 @@
         padding: 20px;
       }
 
+      .card-body {
+        height: 300px;
+        width: 300px;
+        margin-bottom: 5px;
+      }
+
+      .card-img {
+        height: 250px;
+        width: 250px;
+      }
+
       .sidenav {
         height: 100%; /* 100% Full-height */
         width: 0; /* 0 width - change this with JavaScript */
@@ -157,6 +161,10 @@
           padding-top: 15px;
         }
       }
+
+      .header-big-top-margin {
+        margin-top: 50px;
+      }
     </style>
   </head>
 
@@ -173,7 +181,7 @@
             />
           </div>
         </button>
-        <h1 class="dashboard">Dashboard</h1>
+        <h1 class="dashboard">Templates</h1>
       </li>
     </div>
     <nav id="mySidenav" class="sidenav">
@@ -213,7 +221,25 @@
         </li>
       </ul>
     </nav>
+    <button id="toggleButton" class="toggle-button">Open Sidebar</button>
+
+    <h2 class="font-weight-light header-big-top-margin">Templates</h2>
+    <div class="row row-cols-2 g-3 d-flex container-fluid mx-auto">
+      <div class="col">
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+      </div>
+      <div class="col">
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+        <div class="card card-body">Card</div>
+      </div>
+    </div>
 
     <script src="./openSideBar.js"></script>
   </body>
 </html>
+v

@@ -18,22 +18,15 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     ></script>
 
-    <link href="/static/styles.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Inter"
     />
+    <link href="Ninjavan/static/styles.css" rel="stylesheet" />
 
     <title>Otterlive</title>
 
     <style>
-      .cusSticky {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 999;
-      }
-
       .cusSticky {
         position: fixed;
         top: 0;
@@ -113,6 +106,17 @@
         padding: 20px;
       }
 
+      .card-body {
+        min-height: 300px;
+        min-width: 300px;
+        margin-right: 5px;
+      }
+
+      .card-img {
+        height: 250px;
+        width: 250px;
+      }
+
       .sidenav {
         height: 100%; /* 100% Full-height */
         width: 0; /* 0 width - change this with JavaScript */
@@ -157,6 +161,198 @@
           padding-top: 15px;
         }
       }
+
+      .header-big-top-margin {
+        margin-top: 60px;
+      }
+
+      .rectangle-33 {
+        /* Rectangle 33 */
+
+        position: absolute;
+        width: 277px;
+        height: 48px;
+        left: 38px;
+        top: 133px;
+
+        background: #d9d9d9;
+      }
+
+      .text-for-33 {
+        position: absolute;
+        width: 217px;
+        height: 22px;
+        left: 69px;
+        top: 143px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .rectangle-35 {
+        /* Rectangle 35 */
+        position: absolute;
+        width: 277px;
+        height: 48px;
+        left: 38px;
+        top: 227px;
+
+        background: #d9d9d9;
+      }
+
+      .text-for-35 {
+        /* Jeans */
+
+        position: absolute;
+        width: 217px;
+        height: 22px;
+        left: 69px;
+        top: 240px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .rectangle-36 {
+        /* Rectangle 36 */
+
+        position: absolute;
+        width: 277px;
+        height: 48px;
+        left: 40px;
+        top: 327px;
+
+        background: #d9d9d9;
+      }
+
+      .text-for-36 {
+        /* Shorts */
+
+        position: absolute;
+        width: 217px;
+        height: 22px;
+        left: 69px;
+        top: 340px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .rectangle-37 {
+        /* Rectangle 37 */
+
+        position: absolute;
+        width: 277px;
+        height: 48px;
+        left: 39px;
+        top: 427px;
+
+        background: #d9d9d9;
+      }
+
+      .text-for-37 {
+        /* Socks */
+
+        position: absolute;
+        width: 217px;
+        height: 22px;
+        left: 69px;
+        top: 440px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .rectangle-38 {
+        /* Rectangle 38 */
+
+        position: absolute;
+        width: 277px;
+        height: 48px;
+        left: 42px;
+        top: 527px;
+
+        background: #d9d9d9;
+      }
+
+      .text-for-38 {
+        /* T-Shirts */
+
+        position: absolute;
+        width: 217px;
+        height: 22px;
+        left: 69px;
+        top: 540px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        text-align: center;
+
+        color: #000000;
+      }
+
+      .rectangle-39 {
+        /* Rectangle 39 */
+
+        position: absolute;
+        width: 277px;
+        height: 48px;
+        left: 42px;
+        top: 627px;
+
+        background: #d9d9d9;
+      }
+
+      .text-for-39 {
+        /* Sweatpants */
+
+        position: absolute;
+        width: 217px;
+        height: 22px;
+        left: 69px;
+        top: 640px;
+
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        text-align: center;
+
+        color: #000000;
+      }
     </style>
   </head>
 
@@ -173,7 +369,7 @@
             />
           </div>
         </button>
-        <h1 class="dashboard">Dashboard</h1>
+        <h1 class="dashboard">Clothes</h1>
       </li>
     </div>
     <nav id="mySidenav" class="sidenav">
@@ -213,6 +409,17 @@
         </li>
       </ul>
     </nav>
+
+    <div class="header-big-top-margin">
+      <div>
+        <a class="rectangle-33 text-for-33" href="shirt.html">Shirt</a>
+        <a class="rectangle-35 text-for-35" href="shirt.html">Jeans</a>
+        <a class="rectangle-36 text-for-36" href="shirt.html">Shorts</a>
+        <a class="rectangle-37 text-for-37" href="shirt.html">Socks</a>
+        <a class="rectangle-38 text-for-38" href="shirt.html">T-Shirt</a>
+        <a class="rectangle-39 text-for-39" href="shirt.html">Sweatpants</a>
+      </div>
+    </div>
 
     <script src="./openSideBar.js"></script>
   </body>
